@@ -1,0 +1,13 @@
+var momentRange = require('moment-range');
+var moment=require('moment')
+momentRange.extendMoment(moment);
+//range=require('moment-range')
+var start  = new Date("2019-05-01T12:00:00")
+  , end    = new Date("2019-05-01T13:00:00")
+  , range1  = moment.range(start, end)
+  ,lol =new Date("2019-05-01T11:00:00"),
+  wat= new Date("2019-05-01T13:00:00")
+  console.log(range1)
+  range2 = moment.range(lol, wat);
+console.log(range2)
+console.log(range1.overlaps(range2))
